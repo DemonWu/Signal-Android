@@ -1,4 +1,4 @@
-package org.thoughtcrime.securesms.logging;
+package com.ytqf.signal.logging;
 
 public class Log {
 

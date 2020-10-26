@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<org.thoughtcrime.securesms.components.AudioView
+<com.ytqf.signal.components.AudioView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -11,4 +11,5 @@
         app:backgroundTintColor="@color/blue_500"
         app:waveformPlayedBarsColor="@color/core_white"
         app:waveformUnplayedBarsColor="@color/transparent_white_40"
+        app:progressAndPlayTint="@color/transparent_white_20"
         tools:visibility="visible"/>

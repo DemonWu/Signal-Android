@@ -2,7 +2,7 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:parentTag="org.thoughtcrime.securesms.components.webrtc.WebRtcCallView">
+    tools:parentTag="com.ytqf.signal.components.webrtc.WebRtcCallView">
 
     <View
         android:id="@+id/call_screen_blur_overlay"
@@ -85,7 +85,7 @@
             app:reverseLayout="true"
             tools:listitem="@layout/webrtc_call_participant_recycler_item" />
 
-        <org.thoughtcrime.securesms.util.views.TouchInterceptingFrameLayout
+        <com.ytqf.signal.util.views.TouchInterceptingFrameLayout
             android:id="@+id/call_screen_pip_area"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -109,13 +109,13 @@
                 tools:background="@color/red"
                 tools:visibility="visible">
 
-                <org.thoughtcrime.securesms.components.webrtc.TextureViewRenderer
+                <com.ytqf.signal.components.webrtc.TextureViewRenderer
                     android:id="@+id/call_screen_small_local_renderer"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 
             </androidx.cardview.widget.CardView>
-        </org.thoughtcrime.securesms.util.views.TouchInterceptingFrameLayout>
+        </com.ytqf.signal.util.views.TouchInterceptingFrameLayout>
 
         <include
             android:id="@+id/call_screen_toolbar"
@@ -126,7 +126,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/call_screen_status_bar_guideline" />
 
-        <org.thoughtcrime.securesms.components.webrtc.WebRtcAudioOutputToggleButton
+        <com.ytqf.signal.components.webrtc.WebRtcAudioOutputToggleButton
             android:id="@+id/call_screen_speaker_toggle"
             android:layout_width="56dp"
             android:layout_height="56dp"
@@ -157,7 +157,7 @@
             app:srcCompat="@drawable/webrtc_call_screen_camera_toggle"
             tools:visibility="visible" />
 
-        <org.thoughtcrime.securesms.components.AccessibleToggleButton
+        <com.ytqf.signal.components.AccessibleToggleButton
             android:id="@+id/call_screen_video_toggle"
             style="@style/WebRtcCallV2CompoundButton"
             android:layout_marginEnd="16dp"
@@ -172,7 +172,7 @@
             tools:checked="true"
             tools:visibility="visible" />
 
-        <org.thoughtcrime.securesms.components.AccessibleToggleButton
+        <com.ytqf.signal.components.AccessibleToggleButton
             android:id="@+id/call_screen_audio_mic_toggle"
             style="@style/WebRtcCallV2CompoundButton"
             android:layout_marginEnd="16dp"

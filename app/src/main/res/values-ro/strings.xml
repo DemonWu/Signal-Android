@@ -805,13 +805,13 @@
   <string name="MessageRecord_left_group">Ați părăsit grupul.</string>
   <string name="MessageRecord_you_updated_group">Ați actualizat grupul.</string>
   <string name="MessageRecord_the_group_was_updated">Grupul a fost actualizat.</string>
-  <string name="MessageRecord_you_called">Ați apelat</string>
-  <string name="MessageRecord_called_you">Contactul te-a sunat</string>
-  <string name="MessageRecord_missed_call">Apel nepreluat</string>
+  <!-- Removed by excludeNonTranslatables <string name="MessageRecord_you_called">Ați apelat</string> -->
+  <!-- Removed by excludeNonTranslatables <string name="MessageRecord_called_you">Contactul te-a sunat</string> -->
+  <!-- Removed by excludeNonTranslatables <string name="MessageRecord_missed_call">Apel nepreluat</string> -->
   <string name="MessageRecord_s_updated_group">%s a actualizat grupul.</string>
-  <string name="MessageRecord_s_called_you">%s te-a sunat</string>
+  <!-- Removed by excludeNonTranslatables <string name="MessageRecord_s_called_you">%s te-a sunat</string> -->
   <string name="MessageRecord_called_s">Apel %s</string>
-  <string name="MessageRecord_missed_call_from">Apel nepreluat de la %s</string>
+  <!-- Removed by excludeNonTranslatables <string name="MessageRecord_missed_call_from">Apel nepreluat de la %s</string> -->
   <string name="MessageRecord_s_joined_signal">%s folosește Signal!</string>
   <string name="MessageRecord_you_disabled_disappearing_messages">Ați dezactivat dispariția mesajelor.</string>
   <string name="MessageRecord_s_disabled_disappearing_messages">%1$s a dezactivat dispariția mesajelor.</string>
@@ -1476,8 +1476,8 @@ Am primit mesajul conform căruia schimbul de chei a avut loc pentru o versiune 
   <string name="ContactSelectionListFragment_error_retrieving_contacts_check_your_network_connection">Eroare la obținerea contactelor, verifică conexiune la rețea.</string>
   <string name="ContactSelectionListFragment_username_not_found">Numele de utilizator nu a fost găsit</string>
   <string name="ContactSelectionListFragment_s_is_not_a_signal_user">\"%1$s\" nu este un utilizator de Signal. Verificați numele de utilizator și încercați din nou.</string>
-  <string name="ContactSelectionListFragment_okay">Okay</string>
-  <string name="ContactSelectionListFragment_the_group_is_full">Grupul este plin</string>
+  <!-- Removed by excludeNonTranslatables <string name="ContactSelectionListFragment_okay">Okay</string> -->
+  <!-- Removed by excludeNonTranslatables <string name="ContactSelectionListFragment_the_group_is_full">Grupul este plin</string> -->
   <string name="ContactSelectionListFragment_you_do_not_need_to_add_yourself_to_the_group">Nu trebuie să vă adăugați pe sine la grup</string>
   <!--blocked_contacts_fragment-->
   <string name="blocked_contacts_fragment__no_blocked_contacts">Nu aveți contacte blocate</string>
@@ -2183,7 +2183,7 @@ Am primit mesajul conform căruia schimbul de chei a avut loc pentru o versiune 
   <string name="ResearchMegaphoneDialog_we_believe_in_privacy"><![CDATA[<p><b>Credem în confidențialitate.</b></p><p>Signal nu vă urmărește și nu vă colectează informațiile. Pentru a îmbunătăți aplicația pentru toată lumea, ne bazăm pe opiniile utilizatorilor noștri, <b>și ne-ar plăcea să o auzim pe a dvs.</b></p><p>Derulăm un sondaj pentru a înțelege mai bine cum folosiți Signal. Studiul nostru nu colectează informații care v-ar putea identifica. Dacă sunteți interesat în a împărtăși păreri suplimentare cu noi, veți avea opțiunea să ne furnizați informații de contact.</p><p>Dacă aveți câteva minute la dispoziție și păreri de oferit, ne-ar plăcea să aflăm de la dvs.</p>]]></string>
   <string name="ResearchMegaphoneDialog_take_the_survey">Completează studiul</string>
   <string name="ResearchMegaphoneDialog_no_thanks">Nu, mulţumesc</string>
-  <string name="ResearchMegaphoneDialog_the_survey_is_hosted_by_surveygizmo_at_the_secure_domain">Acest studiu este găzduit de Surveygizmo pe domeniul securizat surveys.signalusers.org</string>
+  <!-- Removed by excludeNonTranslatables <string name="ResearchMegaphoneDialog_the_survey_is_hosted_by_surveygizmo_at_the_secure_domain">Acest studiu este găzduit de Surveygizmo pe domeniul securizat surveys.signalusers.org</string> -->
   <!--transport_selection_list_item-->
   <string name="transport_selection_list_item__transport_icon">Pictogramă transport</string>
   <string name="ConversationListFragment_loading">Se încarcă…</string>

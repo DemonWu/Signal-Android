@@ -24,7 +24,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
-    <org.thoughtcrime.securesms.components.emoji.EmojiEditText
+    <com.ytqf.signal.components.emoji.EmojiEditText
         android:id="@+id/name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
         app:layout_constraintTop_toBottomOf="@id/group_avatar"
         tools:visibility="visible" />
 
-    <org.thoughtcrime.securesms.util.views.LearnMoreTextView
+    <com.ytqf.signal.util.views.LearnMoreTextView
         android:id="@+id/gv2_warning"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -89,7 +89,7 @@
         app:layout_constraintTop_toBottomOf="@id/gv2_warning"
         app:layout_goneMarginTop="30dp" />
 
-    <org.thoughtcrime.securesms.groups.ui.GroupMemberListView
+    <com.ytqf.signal.groups.ui.GroupMemberListView
         android:id="@+id/member_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"

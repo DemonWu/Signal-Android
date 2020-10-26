@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="org.thoughtcrime.securesms">
+          package="com.ytqf.signal">
 
     <uses-sdk tools:overrideLibrary="androidx.camera.core,androidx.camera.camera2,androidx.camera.lifecycle" />
 
@@ -20,7 +20,7 @@
     <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
 
     <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
-    <uses-permission android:name="org.thoughtcrime.securesms.ACCESS_SECRETS"/>
+    <uses-permission android:name="com.ytqf.signal.ACCESS_SECRETS"/>
     <uses-permission android:name="android.permission.READ_PROFILE"/>
     <uses-permission android:name="android.permission.WRITE_PROFILE"/>
     <uses-permission android:name="android.permission.BROADCAST_WAP_PUSH"
@@ -91,7 +91,7 @@
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
     <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
 
-    <application android:name=".ApplicationContext"
+    <application android:name="com.ytqf.signal.ApplicationContext"
                  android:icon="@mipmap/ic_launcher"
                  android:label="@string/app_name"
                  android:supportsRtl="true"
@@ -114,7 +114,7 @@
     <meta-data android:name="google_analytics_adid_collection_enabled" android:value="false" />
     <meta-data android:name="firebase_messaging_auto_init_enabled" android:value="false" />
 
-    <activity android:name=".WebRtcCallActivity"
+    <activity android:name="com.ytqf.signal.WebRtcCallActivity"
               android:theme="@style/TextSecure.LightTheme.WebRTCCall"
               android:excludeFromRecents="true"
               android:screenOrientation="portrait"
@@ -124,28 +124,28 @@
               android:taskAffinity=".calling"
               android:launchMode="singleTask"/>
 
-    <activity android:name=".messagerequests.CalleeMustAcceptMessageRequestActivity"
+    <activity android:name="com.ytqf.signal.messagerequests.CalleeMustAcceptMessageRequestActivity"
               android:theme="@style/TextSecure.DarkNoActionBar"
               android:screenOrientation="portrait"
               android:noHistory="true"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".InviteActivity"
+    <activity android:name="com.ytqf.signal.InviteActivity"
               android:theme="@style/Signal.Light.NoActionBar.Invite"
               android:windowSoftInputMode="stateHidden"
-              android:parentActivityName=".MainActivity"
+              android:parentActivityName="com.ytqf.signal.MainActivity"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize">
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value=".MainActivity" />
+            android:value="com.ytqf.signal.MainActivity" />
     </activity>
 
-    <activity android:name=".PromptMmsActivity"
+    <activity android:name="com.ytqf.signal.PromptMmsActivity"
               android:label="Configure MMS Settings"
               android:windowSoftInputMode="stateUnchanged"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".DeviceProvisioningActivity"
+    <activity android:name="com.ytqf.signal.DeviceProvisioningActivity"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize">
         <intent-filter>
             <action android:name="android.intent.action.VIEW" />
@@ -155,10 +155,10 @@
         </intent-filter>
     </activity>
 
-    <activity android:name=".preferences.MmsPreferencesActivity"
+    <activity android:name="com.ytqf.signal.preferences.MmsPreferencesActivity"
                android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".sharing.ShareActivity"
+    <activity android:name="com.ytqf.signal.sharing.ShareActivity"
               android:theme="@style/Theme.Signal.DayNight.NoActionBar"
               android:excludeFromRecents="true"
               android:launchMode="singleTask"
@@ -191,7 +191,7 @@
 
     </activity>
 
-    <activity android:name=".stickers.StickerPackPreviewActivity"
+    <activity android:name="com.ytqf.signal.stickers.StickerPackPreviewActivity"
               android:theme="@style/Theme.Signal.DayNight.NoActionBar"
               android:launchMode="singleTask"
               android:noHistory="true"
@@ -215,7 +215,7 @@
     </activity>
 
     <activity-alias android:name=".RoutingActivity"
-                    android:targetActivity=".MainActivity"
+                    android:targetActivity="com.ytqf.signal.MainActivity"
                     android:exported="true">
 
         <intent-filter>
@@ -248,19 +248,19 @@
 
     </activity-alias>
 
-    <activity android:name=".conversation.ConversationActivity"
+    <activity android:name="com.ytqf.signal.conversation.ConversationActivity"
               android:windowSoftInputMode="stateUnchanged"
               android:launchMode="singleTask"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"
-              android:parentActivityName=".MainActivity">
+              android:parentActivityName="com.ytqf.signal.MainActivity">
         <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.thoughtcrime.securesms.MainActivity" />
+                android:value="com.ytqf.signal.MainActivity" />
     </activity>
 
-    <activity android:name=".longmessage.LongMessageActivity" />
+    <activity android:name="com.ytqf.signal.longmessage.LongMessageActivity" />
 
-    <activity android:name=".conversation.ConversationPopupActivity"
+    <activity android:name="com.ytqf.signal.conversation.ConversationPopupActivity"
               android:windowSoftInputMode="stateVisible"
               android:launchMode="singleTask"
               android:taskAffinity=""
@@ -268,79 +268,79 @@
               android:theme="@style/TextSecure.LightTheme.Popup"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" />
 
-    <activity android:name=".messagedetails.MessageDetailsActivity"
+    <activity android:name="com.ytqf.signal.messagedetails.MessageDetailsActivity"
               android:label="@string/AndroidManifest__message_details"
               android:windowSoftInputMode="stateHidden"
               android:launchMode="singleTask"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".groups.ui.pendingmemberinvites.PendingMemberInvitesActivity"
+    <activity android:name="com.ytqf.signal.groups.ui.pendingmemberinvites.PendingMemberInvitesActivity"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"
               android:theme="@style/Theme.Signal.DayNight.NoActionBar" />
 
-    <activity android:name=".groups.ui.invitesandrequests.ManagePendingAndRequestingMembersActivity"
+    <activity android:name="com.ytqf.signal.groups.ui.invitesandrequests.ManagePendingAndRequestingMembersActivity"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode"
               android:theme="@style/Theme.Signal.DayNight.NoActionBar" />
 
-    <activity android:name=".groups.ui.managegroup.ManageGroupActivity"
+    <activity android:name="com.ytqf.signal.groups.ui.managegroup.ManageGroupActivity"
               android:windowSoftInputMode="stateAlwaysHidden"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".recipients.ui.managerecipient.ManageRecipientActivity"
+    <activity android:name="com.ytqf.signal.recipients.ui.managerecipient.ManageRecipientActivity"
               android:windowSoftInputMode="stateAlwaysHidden"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".DatabaseMigrationActivity"
+    <activity android:name="com.ytqf.signal.DatabaseMigrationActivity"
               android:theme="@style/NoAnimation.Theme.AppCompat.Light.DarkActionBar"
               android:launchMode="singleTask"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".migrations.ApplicationMigrationActivity"
+    <activity android:name="com.ytqf.signal.migrations.ApplicationMigrationActivity"
               android:theme="@style/NoAnimation.Theme.AppCompat.Light.DarkActionBar"
               android:launchMode="singleTask"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-      <activity android:name=".PassphraseCreateActivity"
+      <activity android:name="com.ytqf.signal.PassphraseCreateActivity"
               android:label="@string/AndroidManifest__create_passphrase"
               android:windowSoftInputMode="stateUnchanged"
               android:theme="@style/Theme.Signal.DayNight.NoActionBar"
               android:launchMode="singleTask"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".PassphrasePromptActivity"
+    <activity android:name="com.ytqf.signal.PassphrasePromptActivity"
               android:launchMode="singleTask"
               android:theme="@style/TextSecure.LightIntroTheme"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".NewConversationActivity"
+    <activity android:name="com.ytqf.signal.NewConversationActivity"
               android:theme="@style/Theme.Signal.DayNight.NoActionBar"
               android:windowSoftInputMode="stateAlwaysVisible"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".PushContactSelectionActivity"
+    <activity android:name="com.ytqf.signal.PushContactSelectionActivity"
           android:label="@string/AndroidManifest__select_contacts"
           android:windowSoftInputMode="stateHidden"
           android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".giph.ui.GiphyActivity"
+    <activity android:name="com.ytqf.signal.giph.ui.GiphyActivity"
               android:theme="@style/Theme.Signal.DayNight.NoActionBar"
               android:windowSoftInputMode="stateHidden"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".mediasend.MediaSendActivity"
+    <activity android:name="com.ytqf.signal.mediasend.MediaSendActivity"
               android:theme="@style/TextSecure.FullScreenMedia"
               android:windowSoftInputMode="stateHidden"
               android:launchMode="singleTop"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".PassphraseChangeActivity"
+    <activity android:name="com.ytqf.signal.PassphraseChangeActivity"
               android:label="@string/AndroidManifest__change_passphrase"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".VerifyIdentityActivity"
+    <activity android:name="com.ytqf.signal.VerifyIdentityActivity"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".ApplicationPreferencesActivity"
+    <activity android:name="com.ytqf.signal.ApplicationPreferencesActivity"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
@@ -348,51 +348,51 @@
         </intent-filter>
     </activity>
 
-    <activity android:name=".registration.RegistrationNavigationActivity"
+    <activity android:name="com.ytqf.signal.registration.RegistrationNavigationActivity"
               android:launchMode="singleTask"
               android:theme="@style/TextSecure.LightRegistrationTheme"
               android:windowSoftInputMode="stateUnchanged"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".revealable.ViewOnceMessageActivity"
+    <activity android:name="com.ytqf.signal.revealable.ViewOnceMessageActivity"
               android:launchMode="singleTask"
               android:theme="@style/TextSecure.FullScreenMedia"
               android:windowSoftInputMode="stateHidden"
               android:excludeFromRecents="true"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".stickers.StickerManagementActivity"
+    <activity android:name="com.ytqf.signal.stickers.StickerManagementActivity"
               android:launchMode="singleTask"
               android:theme="@style/TextSecure.LightTheme"
               android:windowSoftInputMode="stateUnchanged"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-     <activity android:name=".DeviceActivity"
+     <activity android:name="com.ytqf.signal.DeviceActivity"
                android:label="@string/AndroidManifest__linked_devices"
                android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".logsubmit.SubmitDebugLogActivity"
+    <activity android:name="com.ytqf.signal.logsubmit.SubmitDebugLogActivity"
               android:label="@string/AndroidManifest__log_submit"
               android:windowSoftInputMode="stateHidden"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".MediaPreviewActivity"
+    <activity android:name="com.ytqf.signal.MediaPreviewActivity"
               android:label="@string/AndroidManifest__media_preview"
               android:windowSoftInputMode="stateHidden"
               android:launchMode="singleTask"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".AvatarPreviewActivity"
+    <activity android:name="com.ytqf.signal.AvatarPreviewActivity"
               android:label="@string/AndroidManifest__media_preview"
               android:windowSoftInputMode="stateHidden"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".mediaoverview.MediaOverviewActivity"
+    <activity android:name="com.ytqf.signal.mediaoverview.MediaOverviewActivity"
               android:theme="@style/Theme.Signal.DayNight.NoActionBar"
               android:windowSoftInputMode="stateHidden"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".DummyActivity"
+    <activity android:name="com.ytqf.signal.DummyActivity"
               android:theme="@android:style/Theme.NoDisplay"
               android:enabled="true"
               android:allowTaskReparenting="true"
@@ -403,11 +403,11 @@
               android:clearTaskOnLaunch="true"
               android:finishOnTaskLaunch="true" />
 
-    <activity android:name=".PlayServicesProblemActivity"
+    <activity android:name="com.ytqf.signal.PlayServicesProblemActivity"
               android:theme="@style/TextSecure.DialogActivity"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".SmsSendtoActivity">
+    <activity android:name="com.ytqf.signal.SmsSendtoActivity">
         <intent-filter>
             <action android:name="android.intent.action.SENDTO" />
             <action android:name="android.intent.action.VIEW" />
@@ -421,11 +421,11 @@
         <intent-filter>
             <action android:name="android.intent.action.VIEW" />
             <category android:name="android.intent.category.DEFAULT" />
-            <data android:mimeType="vnd.android.cursor.item/vnd.org.thoughtcrime.securesms.contact" />
+            <data android:mimeType="vnd.android.cursor.item/vnd.com.ytqf.signal.contact" />
         </intent-filter>
     </activity>
 
-    <activity android:name="org.thoughtcrime.securesms.webrtc.VoiceCallShare"
+    <activity android:name="com.ytqf.signal.webrtc.VoiceCallShare"
               android:excludeFromRecents="true"
               android:theme="@style/NoAnimation.Theme.BlackScreen"
               android:launchMode="singleTask"
@@ -434,115 +434,115 @@
         <intent-filter>
             <action android:name="android.intent.action.VIEW" />
             <category android:name="android.intent.category.DEFAULT" />
-            <data android:mimeType="vnd.android.cursor.item/vnd.org.thoughtcrime.securesms.call" />
+            <data android:mimeType="vnd.android.cursor.item/vnd.com.ytqf.signal.call" />
         </intent-filter>
 
     </activity>
 
-    <activity android:name=".mediasend.AvatarSelectionActivity"
+    <activity android:name="com.ytqf.signal.mediasend.AvatarSelectionActivity"
               android:theme="@style/TextSecure.FullScreenMedia"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".BlockedContactsActivity"
+    <activity android:name="com.ytqf.signal.BlockedContactsActivity"
               android:theme="@style/TextSecure.LightTheme"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".scribbles.ImageEditorStickerSelectActivity"
+    <activity android:name="com.ytqf.signal.scribbles.ImageEditorStickerSelectActivity"
               android:theme="@style/TextSecure.DarkTheme"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".profiles.edit.EditProfileActivity"
+    <activity android:name="com.ytqf.signal.profiles.edit.EditProfileActivity"
               android:theme="@style/TextSecure.LightRegistrationTheme"
               android:windowSoftInputMode="stateVisible|adjustResize" />
 
-    <activity android:name=".lock.v2.CreateKbsPinActivity"
+    <activity android:name="com.ytqf.signal.lock.v2.CreateKbsPinActivity"
             android:theme="@style/TextSecure.LightRegistrationTheme"
             android:windowSoftInputMode="adjustResize"
             android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".lock.v2.KbsMigrationActivity"
+    <activity android:name="com.ytqf.signal.lock.v2.KbsMigrationActivity"
             android:theme="@style/TextSecure.LightRegistrationTheme"
             android:windowSoftInputMode="adjustResize"
             android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".ClearProfileAvatarActivity"
+    <activity android:name="com.ytqf.signal.ClearProfileAvatarActivity"
             android:theme="@style/Theme.AppCompat.Dialog.Alert"
             android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"
             android:icon="@drawable/clear_profile_avatar"
             android:label="@string/AndroidManifest_remove_photo">
 
         <intent-filter>
-            <action android:name="org.thoughtcrime.securesms.action.CLEAR_PROFILE_PHOTO"/>
+            <action android:name="com.ytqf.signal.action.CLEAR_PROFILE_PHOTO"/>
             <category android:name="android.intent.category.DEFAULT"/>
         </intent-filter>
     </activity>
 
-    <activity android:name=".contacts.TurnOffContactJoinedNotificationsActivity"
+    <activity android:name="com.ytqf.signal.contacts.TurnOffContactJoinedNotificationsActivity"
               android:theme="@style/Theme.AppCompat.Dialog.Alert" />
 
-    <activity android:name=".messagerequests.MessageRequestMegaphoneActivity"
+    <activity android:name="com.ytqf.signal.messagerequests.MessageRequestMegaphoneActivity"
               android:theme="@style/TextSecure.LightRegistrationTheme"
               android:windowSoftInputMode="adjustResize"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".contactshare.ContactShareEditActivity"
+    <activity android:name="com.ytqf.signal.contactshare.ContactShareEditActivity"
               android:theme="@style/TextSecure.LightTheme"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".contactshare.ContactNameEditActivity"
+    <activity android:name="com.ytqf.signal.contactshare.ContactNameEditActivity"
               android:theme="@style/Theme.Signal.DayNight.NoActionBar"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".contactshare.SharedContactDetailsActivity"
+    <activity android:name="com.ytqf.signal.contactshare.SharedContactDetailsActivity"
               android:theme="@style/Theme.Signal.DayNight.NoActionBar"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".ShortcutLauncherActivity"
+    <activity android:name="com.ytqf.signal.ShortcutLauncherActivity"
               android:theme="@style/Theme.Signal.DayNight.NoActionBar"
               android:exported="true"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
     <activity
-            android:name=".maps.PlacePickerActivity"
+            android:name="com.ytqf.signal.maps.PlacePickerActivity"
             android:label="@string/PlacePickerActivity_title"
             android:theme="@style/Theme.Signal.DayNight.NoActionBar"
             android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
-    <activity android:name=".MainActivity"
+    <activity android:name="com.ytqf.signal.MainActivity"
               android:theme="@style/Theme.Signal.DayNight.NoActionBar"
               android:launchMode="singleTask"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" />
 
-    <activity android:name=".pin.PinRestoreActivity"
+    <activity android:name="com.ytqf.signal.pin.PinRestoreActivity"
               android:theme="@style/Theme.Signal.DayNight.NoActionBar"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" />
 
-    <activity android:name=".groups.ui.creategroup.CreateGroupActivity"
+    <activity android:name="com.ytqf.signal.groups.ui.creategroup.CreateGroupActivity"
               android:theme="@style/Theme.Signal.DayNight.NoActionBar" />
 
-    <activity android:name=".groups.ui.addtogroup.AddToGroupsActivity"
+    <activity android:name="com.ytqf.signal.groups.ui.addtogroup.AddToGroupsActivity"
               android:theme="@style/Theme.Signal.DayNight.NoActionBar" />
 
-    <activity android:name=".groups.ui.addmembers.AddMembersActivity"
+    <activity android:name="com.ytqf.signal.groups.ui.addmembers.AddMembersActivity"
               android:theme="@style/Theme.Signal.DayNight.NoActionBar" />
 
-    <activity android:name=".groups.ui.creategroup.details.AddGroupDetailsActivity"
+    <activity android:name="com.ytqf.signal.groups.ui.creategroup.details.AddGroupDetailsActivity"
               android:theme="@style/Theme.Signal.DayNight.NoActionBar" />
 
-    <activity android:name=".groups.ui.chooseadmin.ChooseNewAdminActivity"
+    <activity android:name="com.ytqf.signal.groups.ui.chooseadmin.ChooseNewAdminActivity"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" />
 
-    <activity android:name=".megaphone.ClientDeprecatedActivity"
+    <activity android:name="com.ytqf.signal.megaphone.ClientDeprecatedActivity"
               android:theme="@style/Theme.Signal.DayNight.NoActionBar"
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode"
               android:launchMode="singleTask" />
 
-    <service android:enabled="true" android:name=".service.WebRtcCallService"/>
-    <service android:enabled="true" android:name=".service.ApplicationMigrationService"/>
-    <service android:enabled="true" android:exported="false" android:name=".service.KeyCachingService"/>
-    <service android:enabled="true" android:name=".messages.IncomingMessageObserver$ForegroundService"/>
+    <service android:enabled="true" android:name="com.ytqf.signal.service.WebRtcCallService"/>
+    <service android:enabled="true" android:name="com.ytqf.signal.service.ApplicationMigrationService"/>
+    <service android:enabled="true" android:exported="false" android:name="com.ytqf.signal.service.KeyCachingService"/>
+    <service android:enabled="true" android:name="com.ytqf.signal.messages.IncomingMessageObserver$ForegroundService"/>
 
-    <service android:name=".components.voice.VoiceNotePlaybackService">
+    <service android:name="com.ytqf.signal.components.voice.VoiceNotePlaybackService">
         <intent-filter>
             <action android:name="android.media.browse.MediaBrowserService" />
         </intent-filter>
@@ -554,7 +554,7 @@
         </intent-filter>
     </receiver>
 
-    <service android:name=".service.QuickResponseService"
+    <service android:name="com.ytqf.signal.service.QuickResponseService"
              android:permission="android.permission.SEND_RESPOND_VIA_MESSAGE"
              android:exported="true" >
         <intent-filter>
@@ -567,14 +567,14 @@
         </intent-filter>
     </service>
 
-    <service android:name=".service.AccountAuthenticatorService" android:exported="true">
+    <service android:name="com.ytqf.signal.service.AccountAuthenticatorService" android:exported="true">
         <intent-filter>
             <action android:name="android.accounts.AccountAuthenticator" />
         </intent-filter>
         <meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@xml/authenticator" />
     </service>
 
-    <service android:name=".service.ContactsSyncAdapterService" android:exported="true">
+    <service android:name="com.ytqf.signal.service.ContactsSyncAdapterService" android:exported="true">
         <intent-filter>
             <action android:name="android.content.SyncAdapter"/>
         </intent-filter>
@@ -582,24 +582,24 @@
         <meta-data android:name="android.provider.CONTACTS_STRUCTURE" android:resource="@xml/contactsformat" />
     </service>
 
-    <service android:name=".service.DirectShareService"
+    <service android:name="com.ytqf.signal.service.DirectShareService"
              android:permission="android.permission.BIND_CHOOSER_TARGET_SERVICE">
         <intent-filter>
             <action android:name="android.service.chooser.ChooserTargetService" />
         </intent-filter>
     </service>
 
-    <service android:name=".service.GenericForegroundService"/>
+    <service android:name="com.ytqf.signal.service.GenericForegroundService"/>
 
-    <service android:name=".gcm.FcmFetchService" />
+    <service android:name="com.ytqf.signal.gcm.FcmFetchService" />
 
-    <service android:name=".gcm.FcmReceiveService">
+    <service android:name="com.ytqf.signal.gcm.FcmReceiveService">
         <intent-filter>
             <action android:name="com.google.firebase.MESSAGING_EVENT" />
         </intent-filter>
     </service>
 
-    <receiver android:name=".service.SmsListener"
+    <receiver android:name="com.ytqf.signal.service.SmsListener"
               android:permission="android.permission.BROADCAST_SMS"
               android:enabled="true"
               android:exported="true">
@@ -611,14 +611,14 @@
              </intent-filter>
     </receiver>
 
-    <receiver android:name=".service.SmsDeliveryListener"
+    <receiver android:name="com.ytqf.signal.service.SmsDeliveryListener"
               android:exported="true">
         <intent-filter>
-            <action android:name="org.thoughtcrime.securesms.services.MESSAGE_SENT"/>
+            <action android:name="com.ytqf.signal.services.MESSAGE_SENT"/>
         </intent-filter>
     </receiver>
 
-    <receiver android:name=".service.MmsListener"
+    <receiver android:name="com.ytqf.signal.service.MmsListener"
               android:enabled="true"
               android:exported="true"
               android:permission="android.permission.BROADCAST_WAP_PUSH">
@@ -632,48 +632,48 @@
              </intent-filter>
     </receiver>
 
-    <receiver android:name=".notifications.MarkReadReceiver"
+    <receiver android:name="com.ytqf.signal.notifications.MarkReadReceiver"
               android:enabled="true"
               android:exported="false">
         <intent-filter>
-            <action android:name="org.thoughtcrime.securesms.notifications.CLEAR"/>
+            <action android:name="com.ytqf.signal.notifications.CLEAR"/>
         </intent-filter>
     </receiver>
 
-    <receiver android:name=".notifications.RemoteReplyReceiver"
+    <receiver android:name="com.ytqf.signal.notifications.RemoteReplyReceiver"
               android:enabled="true"
               android:exported="false">
         <intent-filter>
-            <action android:name="org.thoughtcrime.securesms.notifications.WEAR_REPLY"/>
+            <action android:name="com.ytqf.signal.notifications.WEAR_REPLY"/>
         </intent-filter>
     </receiver>
 
-    <receiver android:name=".notifications.AndroidAutoHeardReceiver"
+    <receiver android:name="com.ytqf.signal.notifications.AndroidAutoHeardReceiver"
               android:exported="false">
         <intent-filter>
-          <action android:name="org.thoughtcrime.securesms.notifications.ANDROID_AUTO_HEARD"/>
+          <action android:name="com.ytqf.signal.notifications.ANDROID_AUTO_HEARD"/>
         </intent-filter>
     </receiver>
 
-    <receiver android:name=".notifications.AndroidAutoReplyReceiver"
+    <receiver android:name="com.ytqf.signal.notifications.AndroidAutoReplyReceiver"
               android:exported="false">
         <intent-filter>
-          <action android:name="org.thoughtcrime.securesms.notifications.ANDROID_AUTO_REPLY"/>
+          <action android:name="com.ytqf.signal.notifications.ANDROID_AUTO_REPLY"/>
         </intent-filter>
     </receiver>
 
-    <receiver android:name=".service.ExpirationListener" />
+    <receiver android:name="com.ytqf.signal.service.ExpirationListener" />
 
-    <receiver android:name=".revealable.ViewOnceMessageManager$ViewOnceAlarm" />
+    <receiver android:name="com.ytqf.signal.revealable.ViewOnceMessageManager$ViewOnceAlarm" />
 
-    <receiver android:name=".service.TrimThreadsByDateManager$TrimThreadsByDateAlarm" />
+    <receiver android:name="com.ytqf.signal.service.TrimThreadsByDateManager$TrimThreadsByDateAlarm" />
 
-    <provider android:name=".providers.PartProvider"
+    <provider android:name="com.ytqf.signal.providers.PartProvider"
               android:grantUriPermissions="true"
               android:exported="false"
               android:authorities="${applicationId}.part" />
 
-    <provider android:name=".providers.MmsBodyProvider"
+    <provider android:name="com.ytqf.signal.providers.MmsBodyProvider"
               android:grantUriPermissions="true"
               android:exported="false"
               android:authorities="${applicationId}.mms" />
@@ -687,79 +687,79 @@
 
     </provider>
 
-    <provider android:name=".database.DatabaseContentProviders$Conversation"
+    <provider android:name="com.ytqf.signal.database.DatabaseContentProviders$Conversation"
               android:authorities="${applicationId}.database.conversation"
               android:exported="false" />
 
-    <provider android:name=".database.DatabaseContentProviders$ConversationList"
+    <provider android:name="com.ytqf.signal.database.DatabaseContentProviders$ConversationList"
               android:authorities="${applicationId}.database.conversationlist"
               android:exported="false" />
 
-    <provider android:name=".database.DatabaseContentProviders$Attachment"
+    <provider android:name="com.ytqf.signal.database.DatabaseContentProviders$Attachment"
               android:authorities="${applicationId}.database.attachment"
               android:exported="false" />
 
-    <provider android:name=".database.DatabaseContentProviders$Sticker"
+    <provider android:name="com.ytqf.signal.database.DatabaseContentProviders$Sticker"
               android:authorities="${applicationId}.database.sticker"
               android:exported="false" />
 
-    <provider android:name=".database.DatabaseContentProviders$StickerPack"
+    <provider android:name="com.ytqf.signal.database.DatabaseContentProviders$StickerPack"
               android:authorities="${applicationId}.database.stickerpack"
               android:exported="false" />
 
-    <receiver android:name=".service.BootReceiver">
+    <receiver android:name="com.ytqf.signal.service.BootReceiver">
         <intent-filter>
             <action android:name="android.intent.action.BOOT_COMPLETED"/>
-            <action android:name="org.thoughtcrime.securesms.RESTART"/>
+            <action android:name="com.ytqf.signal.RESTART"/>
         </intent-filter>
     </receiver>
 
-    <receiver android:name=".service.DirectoryRefreshListener">
+    <receiver android:name="com.ytqf.signal.service.DirectoryRefreshListener">
         <intent-filter>
             <action android:name="android.intent.action.BOOT_COMPLETED" />
         </intent-filter>
     </receiver>
 
-    <receiver android:name=".service.RotateSignedPreKeyListener">
+    <receiver android:name="com.ytqf.signal.service.RotateSignedPreKeyListener">
         <intent-filter>
             <action android:name="android.intent.action.BOOT_COMPLETED" />
         </intent-filter>
     </receiver>
 
-    <receiver android:name=".service.RotateSenderCertificateListener">
+    <receiver android:name="com.ytqf.signal.service.RotateSenderCertificateListener">
         <intent-filter>
             <action android:name="android.intent.action.BOOT_COMPLETED" />
         </intent-filter>
     </receiver>
 
-    <receiver android:name=".service.LocalBackupListener">
+    <receiver android:name="com.ytqf.signal.service.LocalBackupListener">
         <intent-filter>
             <action android:name="android.intent.action.BOOT_COMPLETED" />
         </intent-filter>
     </receiver>
 
-    <receiver android:name=".service.PersistentConnectionBootListener">
+    <receiver android:name="com.ytqf.signal.service.PersistentConnectionBootListener">
         <intent-filter>
             <action android:name="android.intent.action.BOOT_COMPLETED"/>
         </intent-filter>
     </receiver>
 
-    <receiver android:name=".notifications.LocaleChangedReceiver">
+    <receiver android:name="com.ytqf.signal.notifications.LocaleChangedReceiver">
         <intent-filter>
             <action android:name="android.intent.action.LOCALE_CHANGED"/>
         </intent-filter>
     </receiver>
 
-    <receiver android:name=".notifications.MessageNotifier$ReminderReceiver"/>
+    <receiver android:name="com.ytqf.signal.notifications.MessageNotifier$ReminderReceiver"/>
 
-    <receiver android:name=".notifications.DeleteNotificationReceiver">
+    <receiver android:name="com.ytqf.signal.notifications.DeleteNotificationReceiver">
         <intent-filter>
-            <action android:name="org.thoughtcrime.securesms.DELETE_NOTIFICATION"/>
+            <action android:name="com.ytqf.signal.DELETE_NOTIFICATION"/>
         </intent-filter>
     </receiver>
 
     <receiver
-        android:name=".service.PanicResponderListener"
+        android:name="com.ytqf.signal.service.PanicResponderListener"
         android:exported="true">
         <intent-filter>
             <action android:name="info.guardianproject.panic.action.TRIGGER" />
@@ -767,28 +767,28 @@
     </receiver>
 
     <service
-        android:name=".gcm.FcmJobService"
+        android:name="com.ytqf.signal.gcm.FcmJobService"
         android:permission="android.permission.BIND_JOB_SERVICE"
         android:enabled="@bool/enable_job_service"
         tools:targetApi="26" />
 
     <service
-        android:name=".jobmanager.JobSchedulerScheduler$SystemService"
+        android:name="com.ytqf.signal.jobmanager.JobSchedulerScheduler$SystemService"
         android:permission="android.permission.BIND_JOB_SERVICE"
         android:enabled="@bool/enable_job_service"
         tools:targetApi="26" />
 
     <service
-        android:name=".jobmanager.KeepAliveService"
+        android:name="com.ytqf.signal.jobmanager.KeepAliveService"
         android:enabled="@bool/enable_alarm_manager" />
 
     <receiver
-        android:name=".jobmanager.AlarmManagerScheduler$RetryReceiver"
+        android:name="com.ytqf.signal.jobmanager.AlarmManagerScheduler$RetryReceiver"
         android:enabled="@bool/enable_alarm_manager" />
 
     <!-- Probably don't need this one -->
     <receiver
-        android:name=".jobmanager.BootReceiver"
+        android:name="com.ytqf.signal.jobmanager.BootReceiver"
         android:enabled="true">
         <intent-filter>
             <action android:name="android.intent.action.BOOT_COMPLETED" />

@@ -1,0 +1,47 @@
+package com.ytqf.signal.jobs;
+
+import androidx.annotation.NonNull;
+
+import com.ytqf.signal.BuildConfig;
+import com.ytqf.signal.TextSecureExpiredException;
+import com.ytqf.signal.attachments.Attachment;
+import com.ytqf.signal.database.AttachmentDatabase;
+import com.ytqf.signal.database.DatabaseFactory;
+import com.ytqf.signal.jobmanager.Job;
+import com.ytqf.signal.keyvalue.SignalStore;
+import com.ytqf.signal.logging.Log;
+
+import java.util.List;
+
+public abstract class SendJob extends BaseJob {
+
+  @SuppressWarnings("unused")
+  private final static String TAG = SendJob.class.getSimpleName();
+
+  public SendJob(Job.Parameters parameters) {
+    super(parameters);
+  }
+
+  @Override
+  public final void onRun() throws Exception {
+    if (SignalStore.misc().isClientDeprecated()) {
+      throw new TextSecureExpiredException(String.format("TextSecure expired (build %d, now %d)",
+                                                         BuildConfig.BUILD_TIMESTAMP,
+                                                         System.currentTimeMillis()));
+    }
+
+    Log.i(TAG, "Starting message send attempt");
+    onSend();
+    Log.i(TAG, "Message send completed");
+  }
+
+  protected abstract void onSend() throws Exception;
+
+  protected void markAttachmentsUploaded(long messageId, @NonNull List<Attachment> attachments) {
+    AttachmentDatabase database = DatabaseFactory.getAttachmentDatabase(context);
+
+    for (Attachment attachment : attachments) {
+      database.markAttachmentUploaded(messageId, attachment);
+    }
+  }
+}
